@@ -1,0 +1,108 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+<style>
+.node
+{
+    padding-left: 20px;
+    display: block;
+}
+
+.node_collapsed
+{
+    padding-left: 20px;
+    display: none;
+
+    
+    visibility: hidden;
+    display: none;
+}
+
+
+
+a:active
+{
+text-decoration:none;
+color: #0000FF;
+font-weight: bold;
+}
+
+a:visited
+{
+text-decoration:none;
+color: #000;
+font-weight: bold;
+}
+
+a:link
+{
+text-decoration:none;
+color: #000;
+font-weight: bold;
+}
+
+a:hover
+{
+text-decoration: underline;
+color: #500;
+font-weight: bold;
+}
+
+</style>
+
+
+<script language="javascript">
+  
+    var displayStates = [];
+
+    function showDiv(div)
+    {    
+        div.style.height     = "";
+        div.style.display    = "block";
+        div.style.visibility = "visible";
+    }
+
+    function hideDiv(div)
+    {
+        div.style.height     = "0px";
+        div.style.display    = "none";      
+        div.style.visibility = "hidden";
+    }
+
+    function toggleDiv(div, defaultState)
+    {
+
+        // set default on first use
+        if (displayStates[div] == undefined)
+            displayStates[div] = defaultState;
+
+        // toggle state
+        displayStates[div] = !displayStates[div];       
+
+        // hide / show
+        if (displayStates[div])
+            showDiv(div);
+        else {
+            hideDiv(div);
+        }
+    }
+
+    function toggleDivName(divname, defaultState)
+    {
+        toggleDiv(document.getElementById(divname), defaultState);
+    }
+
+</script>
+
+<nobr><tt><a href='javascript: toggleDivName("9fbe2cb2-88fb-4d42-8113-9130827c4d10", true)'>+</a>&nbsp;</tt>Web Development</nobr><br/>
+<div id='9fbe2cb2-88fb-4d42-8113-9130827c4d10' class='node'><nobr><tt><a href='javascript: toggleDivName("8be94e61-e480-4b84-931c-6af164976835", true)'>+</a>&nbsp;</tt>HTML Basics</nobr><br/>
+<div id='8be94e61-e480-4b84-931c-6af164976835' class='node'><nobr><tt><a href='javascript: toggleDivName("9945becc-d409-4a5d-8f2b-91652d72879c", true)'>+</a>&nbsp;</tt><a href='html%20basics/html%20introduction/page.html' target='viewer'>HTML Introduction</a></nobr><br/>
+<div id='9945becc-d409-4a5d-8f2b-91652d72879c' class='node'><nobr><tt>&nbsp;&nbsp;</tt><a href='html%20basics/html%20introduction/html%20basic%20structure/page.html' target='viewer'>HTML Basic Structure</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='html%20basics/html%20introduction/%21doctype/page.html' target='viewer'>!DOCTYPE</a></nobr><br/>
+</div>
+</div>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='trash' target='viewer'>Trash</a></nobr><br/>
+</div>
+</body></html>
